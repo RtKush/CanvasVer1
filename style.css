@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1a1b1b; 
+}
+
+.container {
+  width: 95%;
+  max-width: 1300px;
+}
+
+/* ---------- Tools Bar ---------- */
+.tools-board {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #323539; 
+  padding: 15px 20px;
+  border-radius: 8px;
+  gap: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.tools-board .row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #ffae00; /* neon cyan title */
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.option span, .option label {
+  color: #e0e0e0; 
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.option.active span, 
+.option:hover span, 
+.option.active label, 
+.option:hover label {
+  color: #00ff04; /* neon cyan on hover */
+}
+
+#fill-color {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+#size-slider {
+  width: 120px;
+}
+
+/* ---------- Colors ---------- */
+.colors .option {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #f59608;
+  transition: transform 0.2s ease;
+}
+
+.colors .option:nth-child(1) { background: #ffffff; }
+.colors .option:nth-child(2) { background: #2d2d2d; }
+.colors .option:nth-child(3) { background: #ff4b4b; }
+.colors .option:nth-child(4) { background: #2ecc71; }
+.colors .option:nth-child(5) { background: #3498db; }
+
+.colors .option:hover {
+  transform: scale(1.15);
+}
+
+.colors .option.selected {
+  outline: 3px solid #39fc09;
+}
+
+/* ---------- Buttons ---------- */
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.clear-canvas {
+  background: #e67e22; /* orange */
+  color: #fff;
+}
+
+.clear-canvas:hover {
+  background: #cf6d19;
+}
+
+.save-img {
+  background: #27ae60; /* green */
+  color: #fff;
+}
+
+.save-img:hover {
+  background: #1f8e4e;
+}
+
+/* ---------- Canvas Area ---------- */
+.drawing-board {
+  margin-top: 15px;
+  background: #40a726;
+  border-radius: 8px;
+  height: 75vh;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+}
+
+.drawing-board canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
